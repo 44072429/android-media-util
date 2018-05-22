@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.SurfaceView;
 import android.view.View;
@@ -234,5 +235,20 @@ public class VideoRecorderActivity extends AppCompatActivity {
 
         }
     };
+
+    // android 物理返回键点击事件重写
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+
+            Intent mIntent = new Intent();
+            mIntent.putExtra("videoPath", "");
+            setResult(0, mIntent);
+            finish();
+
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
 }
