@@ -62,7 +62,7 @@ public class VideoRecorderActivity extends AppCompatActivity {
 
                 Intent mIntent = new Intent();
                 mIntent.putExtra("videoPath", "");
-                setResult(0, mIntent);
+                setResult(100, mIntent);
                 finish();
 
             }
@@ -230,7 +230,7 @@ public class VideoRecorderActivity extends AppCompatActivity {
 
             Intent mIntent = new Intent();
             mIntent.putExtra("videoPath", path);
-            setResult(0, mIntent);
+            setResult(100, mIntent);
             finish();
 
         }
@@ -243,7 +243,7 @@ public class VideoRecorderActivity extends AppCompatActivity {
 
             Intent mIntent = new Intent();
             mIntent.putExtra("videoPath", "");
-            setResult(0, mIntent);
+            setResult(100, mIntent);
             finish();
 
             return true;

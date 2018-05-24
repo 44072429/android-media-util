@@ -6,8 +6,6 @@ group='com.github.44072429'//替换成你的Github的用户名
 android {
     compileSdkVersion 27
 
-
-
     defaultConfig {
         minSdkVersion 17
         targetSdkVersion 27
